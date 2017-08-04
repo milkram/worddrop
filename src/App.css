@@ -1,0 +1,26 @@
+.App {
+	/* text-align: center; */
+  	background-color: white; 
+	max-width: 800px;
+	max-height: 450px;
+	width: 100%;
+	height: 450px;
+	border-color: black;
+	border-style: solid;
+}
+
+.input-form {
+	float: left;
+	/* opacity: 0; */
+}
+
+.input-box {
+}
+
+.populated-list {
+	list-style: none;
+}
+
+.falling-word {
+
+}
