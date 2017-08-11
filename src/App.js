@@ -40,8 +40,12 @@ class App extends Component {
 		if (newWords.length > 0) {
 			for (let i = 0; i < newWords.length; i++) {
 				newWords[i].marginTop += 0.1;
+				if(newWords[i].marginTop > 400){
+					newWords[i].display = "none"
+				}
 			}
 		}
+		
 		this.setState({
 			words: newWords
 		});
@@ -77,7 +81,8 @@ class App extends Component {
 			{
 				word: list[rand],
 				marginTop: -100,
-				marginLeft: leftMargin
+				marginLeft: leftMargin,
+				display:""
 			}
 		);
 
@@ -122,7 +127,7 @@ class App extends Component {
 		let words = this.state.words;
 		let wordsJSX = words.map((el, i) => {
 			return (
-				<div key={i} className="falling-word" style={{ marginLeft: el.marginLeft, marginTop: el.marginTop }}>
+				<div key={i} className="falling-word" style={{ marginLeft: el.marginLeft, marginTop: el.marginTop ,display : el.display}}>
 					<h3>{el.word}</h3>
 				</div>
 			)
@@ -134,7 +139,7 @@ class App extends Component {
 					<input autoFocus value={this.state.inputBoxContents} onChange={this.inputBoxChange} id="input-box"></input>
 				</form>
 				<br />
-				<div>
+				<div className="wordContainer">
 					{wordsJSX}
 				</div>
 			</div>

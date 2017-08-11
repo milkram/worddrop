@@ -11,10 +11,16 @@
 
 .input-form {
 	float: left;
-	/* opacity: 0; */
+	 opacity: 0; 
 }
 
-.input-box {
+.wordContainer {
+	height:450px;
+	  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+
 }
 
 .populated-list {
@@ -22,5 +28,7 @@
 }
 
 .falling-word {
-
+	max-height:50px;
+	position:fixed;
+	top:0;
 }
